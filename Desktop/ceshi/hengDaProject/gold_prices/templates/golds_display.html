@@ -1,0 +1,63 @@
+<!-- golds_display.html -->
+{% extends 'base.html' %}
+{% block title %}Gold Price - GoldPulse{% endblock %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Gold Prices</title>
+    <form method="GET" action="{% url 'gold_prices:golds_display' %}">
+
+        <label for="year">Year:</label>
+        <input type="text" id="year" name="SearchTime" value="{{ year }}">
+
+        <label for="company_name">Company Name:</label>
+        <input type="text" id="company_name" name="Name" value="{{ company_name }}">
+
+        <button type="submit">Search</button>
+    </form>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>All Gold Prices</h1>
+    <!-- Display all gold prices from the database in a table -->
+    <table>
+        <thead>
+            <tr>
+                <th>Label</th>
+                <th>Value</th>
+                <th>Unit</th>
+                <th>Name</th>
+                <th>Search Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for gold in gold_prices %}
+                <tr>
+                    <td>{{ gold.label }}</td>
+                    <td>{{ gold.value }}</td>
+                    <td>{{ gold.unit }}</td>
+                    <td>{{ gold.name }}</td>
+                    <td>{{ gold.search_time }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
+
+
+{% endblock %}

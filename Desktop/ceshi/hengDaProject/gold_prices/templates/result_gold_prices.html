@@ -1,0 +1,31 @@
+
+
+{% extends 'base.html' %}
+{% block title %}Gold Price - GoldPulse{% endblock %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gold Prices Result</title>
+</head>
+<body>
+    <h1>Gold Prices Result</h1>
+    <!-- Display the scraped data -->
+    <ul>
+        {% for entry in data %}
+            <li>{{ entry.label }} - {{ entry.value }} - {{ entry.unit }} - {{ entry.name }} - {{ entry.search_time }}</li>
+        {% endfor %}
+    </ul>
+
+    <!-- Add a button to navigate to golds_display page -->
+    <a href="{% url 'gold_prices:golds_display' %}"><button>Display All Gold Prices</button></a>
+    
+
+
+    <p>Current Datetime: {{ current_datetime }}</p>
+</body>
+</html>
+
+{% endblock %}

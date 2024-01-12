@@ -1,0 +1,29 @@
+<!-- gold_prices_template.html -->
+
+{% extends 'base.html' %}
+
+{% block title %}Gold Price - GoldPulse{% endblock %}
+
+{% block content %}
+    <div class="left-column">
+        <h2>Welcome to the Gold Prices Template</h2>
+        <p>This is the content you want to display when you navigate to this page.</p>
+
+        <!-- Your existing content goes here -->
+        <ul class="dropdown nav-top">
+            <li><a href="{% url 'gold_prices:gold_prices_template' %}" class="dropdown-toggle on" data-toggle="dropdown">金价</a></li>
+            <li class="dropdown nav-top">
+                <a href="{% url 'gold_prices:gold_prices' %}">所有金价查询</a>
+                <ul class="dropdown-menu">
+                    <li><a href="{% url 'gold_prices:golds_display' %}">所有金价</a></li>
+                </ul>
+            </li>
+        </ul>
+        
+        <div class="chart-container">
+            <!-- Add your chart code or integrate a charting library here -->
+            <!-- Example: Use Chart.js -->
+            <canvas id="myChart" width="400" height="200"></canvas>
+        </div>
+    </div>
+{% endblock %}
