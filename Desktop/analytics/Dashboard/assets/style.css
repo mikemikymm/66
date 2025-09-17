@@ -1,0 +1,274 @@
+/* GLOBAL RESET & TYPOGRAPHY */
+body {
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    background-color: #F9FAFB;
+    color: #1F2937;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #1E3A8A;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #091229;
+}
+
+h5 {color: #091229;}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1E3A8A;
+}
+
+h4, p, label {
+    font-size: 1rem;
+    color: #374151;
+    font-weight: 500;
+}
+
+/* DASHBOARD LAYOUT */
+.dash-container {
+    max-width: 1400px;
+    margin: auto;
+    padding: 30px;
+}
+
+/* TAB NAVIGATION */
+.tab {
+    font-size: 16px;
+    font-weight: 600;
+    padding: 12px 24px;
+    border-radius: 12px 12px 0 0;
+    background-color: #E5E7EB;
+    margin-right: 4px;
+    color: #1F2937;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tab--selected {
+    background-color: #FFA000 !important;
+    color: #fff !important;
+    font-weight: 700;
+    border-top: 4px solid #FFA000 !important;
+}
+
+/* METRIC CARDS */
+.metric-row {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin: 25px 0;
+}
+
+.square-card {
+    width: 180px;
+    height: 180px;
+    background-color: #EEF6FD;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease-in-out;
+    text-align: center;
+}
+
+.square-card:hover {
+    transform: scale(1.03);
+}
+
+.icon-style {
+    font-size: 30px;
+    color: #0a2b6a;
+    margin-bottom: 10px;
+}
+
+.metric-card {
+    font-size: 22px;
+    font-weight: 600;
+    color: #0a2b6a;
+    margin-top: 8px;
+}
+
+/* DATE PICKERS */
+.date-picker-card {
+    background-color: #ffffff;
+    padding: 20px 25px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    width: 80%;
+    margin: 30px auto 10px auto;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.05);
+}
+
+.date-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1E3A8A;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.date-picker-wrapper {
+    padding: 10px;
+}
+
+.custom-date-picker {
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #cdd7e1;
+    background-color: white;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+    width: 100%;
+}
+
+/* CHART CONTAINERS */
+.plotly-graph-div {
+    border-radius: 10px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.04);
+    padding: 10px;
+    background-color: white;
+    margin-top: 20px;
+}
+
+/* WRAPPERS */
+.tab-content {
+    background-color: white;
+    padding: 32px;
+    border-radius: 16px;
+    margin: 30px auto;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
+}
+
+/* ACCESSIBILITY */
+:focus {
+    outline: 3px solid #3B82F6;
+    outline-offset: 3px;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+    .metric-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .square-card {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .date-picker-card {
+        width: 95%;
+    }
+}
+
+/* Enhance dropdown */
+#prefix-dropdown {
+    font-size: 16px;
+    padding: 10px;
+    margin: 20px auto;
+    max-width: 500px;
+    border-radius: 8px;
+    border: 1px solid #cbd5e1;
+    box-shadow: 0px 2px 6px rgba(0,0,0,0.05);
+}
+
+/* Tweak the heatmap container */
+.plotly-graph-div {
+    border-radius: 8px;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+
+/* Layout container */
+.demographics-tab {
+    display: flex;
+    gap: 30px;
+    padding: 30px;
+    flex-wrap: wrap;
+  }
+  
+  /* Sidebar styles */
+  .sidebar {
+    width: 20%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  /* Labels & groups */
+  .section-title {
+    margin-bottom: 20px;
+  }
+  
+  .filter-label {
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+  }
+  
+  .filter-group {
+    margin-bottom: 30px;
+  }
+  
+  /* Radio items */
+  .radio-item {
+    display: block;
+    margin-bottom: 6px;
+  }
+  
+  /* Chart layout */
+  .charts {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  /* Chart rows */
+  .chart-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  /* Individual chart container */
+  .chart-box {
+    width: 48%;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.04);
+}
+  
+.full-width {
+    width: 100%;
+}
+  
+* Chart titles */
+.chart-title {
+    text-align: center;
+    margin-bottom: 15px;
+}
+  
+

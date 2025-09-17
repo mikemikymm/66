@@ -1,0 +1,13 @@
+node_modules/
+.env
+.history
+.ipynb_checkpoints
+.DS_Store
+
+*.json
+__pycache__/
+*.pyc
+
+conversion-rate.txt
+onboarding_tracking_report.xlsx
+os_signup_week_summary.csv
